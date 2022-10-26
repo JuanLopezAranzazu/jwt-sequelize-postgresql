@@ -1,0 +1,38 @@
+GET http://localhost:3001/api/v1/users
+
+###
+
+POST http://localhost:3001/api/v1/users
+Content-Type: application/json
+
+{
+  "fullname": "Juan Esteban Lopez",
+  "username": "juanlopezaranzazu",
+  "password": "root123"
+}
+
+###
+
+POST http://localhost:3001/api/v1/auth
+Content-Type: application/json
+
+{
+  "username": "juanlopezaranzazu",
+  "password": "root123"
+}
+
+###
+
+GET http://localhost:3001/api/v1/notes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJqdWFubG9wZXphcmFuemF6dSIsImlhdCI6MTY2Njc5NzQ1NiwiZXhwIjoxNjY2ODAxMDU2fQ.gss33ImgGhbROqpKsTQB4PZFawCsvn3WmBeY6kpNKhs
+
+###
+
+POST http://localhost:3001/api/v1/notes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJqdWFubG9wZXphcmFuemF6dSIsImlhdCI6MTY2Njc5NzQ1NiwiZXhwIjoxNjY2ODAxMDU2fQ.gss33ImgGhbROqpKsTQB4PZFawCsvn3WmBeY6kpNKhs
+
+{
+  "title": "Javascript compiler",
+  "url": "https://www.programiz.com/javascript/online-compiler/"
+}
